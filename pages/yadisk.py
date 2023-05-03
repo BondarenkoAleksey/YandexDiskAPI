@@ -17,9 +17,6 @@ class YandexDisk(HttpMethod):
             response, expected_params_of_response_create_folder)
         Assertions.assert_value_in_json(response, "название папки", folder_name,
                                         response.url[-10:])
-        # print("response_json = ", response.json())
-        # print("response_json = ", list(response.json().keys()))
-        # print(response.url[-10:])
 
     def get_folder(self):
         print('\nGET /v1/disk/resources - проверка наличия созданной папки')
